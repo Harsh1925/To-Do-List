@@ -13,7 +13,8 @@ function App() {
   function updatingItems() {
     setItems((prevItems) => {
       return [...prevItems, inputText]
-    })
+    });
+    setText("");
   }
 
 
@@ -23,7 +24,7 @@ function App() {
         <h1>To-Do List</h1>
       </div>
       <div className="form">
-        <input onChange={gettingValue} type="text" />
+        <input onChange={gettingValue} type="text" value={inputText} />
         <button onClick={updatingItems}>
           <span>Add</span>
         </button>
